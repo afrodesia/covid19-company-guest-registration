@@ -1,0 +1,10 @@
+.form-check-label {
+  padding-left: 5px;
+}
+
+.form {
+  border-radius: 25px;
+  border: 1px solid grey;
+  padding: 15px;
+  box-shadow: 5px 5px 3px #888888;
+}
