@@ -72,7 +72,6 @@ class GuestRegistrationForm extends Component {
                     email: '',
                     phone: '',
                     gdpr: false,
-                    optIn: false,
                     clientId: this.clientId
                 }}
                 validationSchema={Yup.object().shape({

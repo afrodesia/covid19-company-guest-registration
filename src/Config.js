@@ -1,3 +1,3 @@
 module.exports = {
-  webServiceToken: 'xxxtokenxxx'
+  webServiceToken: 'xxxTokenxxx'
 }

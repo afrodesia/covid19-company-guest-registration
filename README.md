@@ -3,7 +3,7 @@ The Corona pandemic is creating new rules and regultions for everyone to stay on
 
 This project aims to digitize the guest registration process and brings efficiency in the process for identifying whos was in the office, including the GDPR compliant deletion of the data. 
 
-Technically thi project is build on a React frontend and [Cockpit CMS}(https://getcockpit.com/) as backend.
+Technically this project is build on a React frontend and [Cockpit CMS}(https://getcockpit.com/) as backend.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Install Cockpit CMS
 Download Cockpit CMS and install it on your fav. Web Server:
-`git clone https://github.com/agentejo/cockpit.git`
+* `git clone https://github.com/agentejo/cockpit.git`
 
 Navigate to http://<your_url>/cockpit, log in a generate an API Key.
 Create a collection called ConnectedMACs with the fields: date (Text) and mac (Text)
@@ -19,8 +19,8 @@ Create a collection called ConnectedMACs with the fields: date (Text) and mac (T
 ### Install the client
 Clone this repository.
 Change the 'xxxtokenxxx' string in Config.js to the API key you have created.
-`npm install`
-`npm run build`
+* `npm install`
+* `npm run build`
 
 Copy the build to your Web Server.
 
