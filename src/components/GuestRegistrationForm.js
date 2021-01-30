@@ -87,7 +87,7 @@ class GuestRegistrationForm extends Component {
                       .oneOf([true], "Please confirm that you have read the GDPR statement")
                 })}
                 onSubmit={async values => {
-                  var url = this.webServiceUrl + "/api/collections/save/Guest?token=" + Config.webServiceToken;
+                  var url = this.webServiceUrl + "/api/collections/save/Guest";
                   let checkIn = new Date();
                   //Format yyyy-mm-dd
                   values.checkIn = checkIn.toLocaleDateString("en-CA");
@@ -95,7 +95,7 @@ class GuestRegistrationForm extends Component {
                   values.checkInTime = checkIn.getHours() + ":" + checkIn.getMinutes() + ":" + checkIn.getSeconds();
                   fetch(url, {
                     method: 'post',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {'Content-Type': 'application/json', 'Cockpit-Token': Config.webServiceToken},
                     body: JSON.stringify({data: values})
                   })
                   .then(res => res.json())

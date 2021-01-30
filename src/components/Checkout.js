@@ -40,7 +40,7 @@ class Checkout extends Component {
     }
 
     handleCheckout() {
-      var url = this.webServiceUrl + "/api/collections/save/Guest?token=" + Config.webServiceToken;
+      var url = this.webServiceUrl + "/api/collections/save/Guest";
       var guest = this.state.guest;
       let checkout = new Date();
       //Format yyyy-mm-dd
@@ -49,7 +49,7 @@ class Checkout extends Component {
       guest.checkOutTime = checkout.getHours() + ":" + checkout.getMinutes() + ":" + checkout.getSeconds();
       fetch(url, {
         method: 'post',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json', 'Cockpit-Token': Config.webServiceToken},
         body: JSON.stringify({data: guest})
       })
       .then((data) => this.handleCheckoutResponse(data))

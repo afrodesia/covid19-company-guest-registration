@@ -53,9 +53,10 @@ class Main extends Component {
     }
 
   getCompanyInformation() {
-    var url = this.getServiceUrl() + "/api/singletons/get/Company?token=" + Config.webServiceToken;
+    var url = this.getServiceUrl() + "/api/singletons/get/Company";
     fetch(url, {
-      method: 'get'
+      method: 'get',
+      headers: {'Content-Type': 'application/json', 'Cockpit-Token': Config.webServiceToken}
     })
       .then(res => res.json())
       .then((data) => this.handleCompanyResponse(data))
